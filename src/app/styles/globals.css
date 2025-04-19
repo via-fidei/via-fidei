@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 14% 97%; 
+    --foreground: 27 19% 25%; 
+
+    --card: 0 0% 100%; 
+    --card-foreground: 27 19% 25%; 
+
+    --popover: 36 14% 97%; 
+    --popover-foreground: 27 19% 25%; 
+
+    --primary: 36 14% 97%; 
+    --primary-foreground: 27 19% 25%; 
+
+    --secondary: 40 18% 92%; 
+    --secondary-foreground: 27 19% 25%; 
+
+    --muted: 40 18% 92%; 
+    --muted-foreground: 157 14% 52%; 
+
+    --accent: 30 20% 45%; 
+    --accent-foreground: 36 14% 97%; 
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 36 14% 97%; 
+
+    --border: 33 22% 84%; 
+    --input: 33 22% 84%; 
+    --ring: 30 20% 45%; 
+
+    --radius: 0.5rem;
+
+    
+    --light-primary: 36 14% 97%;
+    --light-secondary: 40 18% 92%;
+    --light-accent: 30 20% 45%;
+    --light-text-primary: 27 19% 25%;
+    --light-text-secondary: 157 14% 52%;
+    --light-border: 33 22% 84%;
+    --light-hover: 30 20% 45%;
+  }
+
+  .dark {
+    --background: 0 0% 10%; 
+    --foreground: 33 22% 84%; 
+
+    --card: 0 0% 18%; 
+    --card-foreground: 33 22% 84%; 
+
+    --popover: 0 0% 10%; 
+    --popover-foreground: 33 22% 84%; 
+
+    --primary: 0 0% 10%; 
+    --primary-foreground: 33 22% 84%; 
+
+    --secondary: 0 0% 18%; 
+    --secondary-foreground: 33 22% 84%; 
+
+    --muted: 0 0% 18%; 
+    --muted-foreground: 30 20% 45%; 
+
+    --accent: 36 33% 63%; 
+    --accent-foreground: 0 0% 10%; 
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 33 22% 84%; 
+
+    --border: 0 0% 24%; 
+    --input: 0 0% 24%; 
+    --ring: 36 33% 63%; 
+
+    
+    --dark-primary: 0 0% 10%;
+    --dark-secondary: 0 0% 18%;
+    --dark-accent: 36 33% 63%;
+    --dark-text-primary: 33 22% 84%;
+    --dark-text-secondary: 30 20% 45%;
+    --dark-border: 0 0% 24%;
+    --dark-hover: 27 22% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+}
+
+@layer utilities {
+  .sacred-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238b735b' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .sacred-pattern-dark {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c0a080' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
